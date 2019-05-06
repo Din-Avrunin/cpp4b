@@ -49,7 +49,13 @@ unsigned int myLength;
  void startNewGame(unsigned int length)
  {
     myLength=length;
-    string myGuess = "0000";
+
+
+for(size_t i = 0; i < length; i++)
+{
+   myGuess =  myGuess + '0';
+}
+
     lastReply="0,0";
     index=0;
     firstTime=true;
