@@ -9,6 +9,7 @@
 #include <iostream>
 using namespace std;
 
+#include <string>
 #include "play.hpp"
 #include "DummyChoosers.hpp"
 #include "DummyGuessers.hpp"
@@ -60,6 +61,7 @@ int main() {
 		RandomChooser randy;
 		SmartGuesser smarty;
 		for (unsigned int i=0; i<100; ++i) {
+			
 			testcase.CHECK_EQUAL(play(randy, smarty, 4, 100)<=100, true);  // smarty should always win in at most 100 turns!
 		}
 		for (unsigned int i=0; i<1000; ++i) {

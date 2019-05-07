@@ -14,11 +14,11 @@ string myGuess;
 string lastReply;
 unsigned int myLength;
 
- string guess()
+ string SmartGuesser::guess()
  {
     return myGuess;
  }
- void learn(string replyStr) 
+ void SmartGuesser::learn(string replyStr) 
  {
      if (firstTime) 
      {
@@ -35,7 +35,6 @@ unsigned int myLength;
      //for the worst = "1,0" "0,0"
      else if (replyStr.at(0)<lastReply.at(0))
      {
-            index--;
             myGuess.at(index)--;
      }
      else // e.g. "1,0" "1,0"
@@ -43,14 +42,14 @@ unsigned int myLength;
             myGuess.at(index)++;
      }
      lastReply=replyStr;
-     std::cout << myGuess << " ";
+   
      
  }
- void startNewGame(unsigned int length)
+ void SmartGuesser::startNewGame(unsigned int length)
  {
     myLength=length;
 
-
+myGuess="";
 for(size_t i = 0; i < length; i++)
 {
    myGuess =  myGuess + '0';

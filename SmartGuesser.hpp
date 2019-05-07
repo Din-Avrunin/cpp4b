@@ -5,8 +5,8 @@ namespace bullpgia
 {
 class SmartGuesser : public bullpgia::Guesser
 {
-virtual std::string guess(){ return "";};
-virtual void learn(std::string){};
-virtual void startNewGame(unsigned int){};
+virtual std::string guess()override;
+virtual void learn(std::string)override;
+virtual void startNewGame(unsigned int)override;
 };
 }
