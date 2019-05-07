@@ -3,13 +3,13 @@
 using namespace bullpgia;
 using std::string, std::to_string;
 
-namespace bullpgia{
-	const string calculateBullAndPgia(const string chosen, const string guess){
+
+	const string bullpgia::calculateBullAndPgia(const string chosen, const string guess){
 		
 		int size=chosen.size();
 int bull=0;
 int pgia=0;
-int arr[size]; //TODO need to fix this to [size]
+int arr[size]; 
 for(size_t i = 0; i < size; i++)
 {
 	arr[i]=0;
@@ -42,4 +42,3 @@ for(size_t i = 0; i < size; i++)
 		return to_string(bull)+","+to_string(pgia);
 
 	}
-}
