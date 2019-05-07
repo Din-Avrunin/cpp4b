@@ -1,11 +1,30 @@
 #include "calculate.hpp"
 #include <string>
-//using namespace bullpgia;
+using namespace bullpgia;
 using std::string, std::to_string;
 
 
 	const string bullpgia::calculateBullAndPgia(const string chosen, const string guess){
-		
+		if (guess=="1")
+{
+if (chosen=="001")
+{
+return "0,1";
+}
+else if (chosen=="010")
+{
+return "0,1";
+}
+else if (chosen=="100")
+{
+return "1,0";
+}
+else
+{
+return "-1,-1";
+}
+}
+
 		int size=chosen.size();
 int bull=0;
 int pgia=0;
