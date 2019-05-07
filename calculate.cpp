@@ -1,6 +1,6 @@
 #include "calculate.hpp"
 #include <string>
-using namespace bullpgia;
+//using namespace bullpgia;
 using std::string, std::to_string;
 
 
